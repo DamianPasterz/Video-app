@@ -1,15 +1,37 @@
 
 import React, { useState, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import "./style/App.css"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 
+
+
+
 function App() {
+  // const dispatch = useDispatch();
+  const inputRef = useRef(null);
+
+
+  // Adding film
+  const addFilm = (e) => {
+    e.preventDefault();
+
+  };
+
+  // Clear list
+  const clearFilmList = (e) => {
+    e.preventDefault();
+    // dispatch()
+    localStorage.clear();
+  };
+
+
   return (
     <MainForm>
       <Label>
-        <h3> Podaj link lub id filmu: </h3>
+        <h3> Enter a link or ID to the video </h3>
         <ClearAndImport>
           <SearchBar>
             {" "}
@@ -50,6 +72,14 @@ const SearchBar = styled.div`
   align-items: center;
   gap: 5px;
 `;
+const Button = styled.button`
+  background: blue;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: red;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+  `;
 const ClearAndImport = styled.div`
   display: flex;
   flex-direction: column;
