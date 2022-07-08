@@ -1,0 +1,14 @@
+.custom-modal-style {
+  width: 900px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.custom-dialog {
+  max-width: 60% !important;
+  /* position: absolute;
+  /top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%); */
+}

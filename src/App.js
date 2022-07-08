@@ -9,9 +9,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import { loadFilms } from "./components/filmAction";
 import { loadFilmsVimeo } from "./components/filmActionVimeo";
 import getVideoId from "get-video-id";
-import { MdViewStream, MdList } from "react-icons/md";
-import Posts from "../pages/Posts";
-import breakpoint from "./StyledComponentsBreakpoint";
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import ViewStreamIcon from '@mui/icons-material/ViewStream';
+
+import Posts from "./pages/Posts";
+import breakpoint from "./components/StyledComponentsBreakpoint";
 
 
 
@@ -161,23 +163,23 @@ function App() {
             <DisplayPick>
               {" "}
               {displayState ? (
-                <MdList
+                <FormatListBulletedIcon
                   size="3rem"
                   color="#3b3d3d"
                   onClick={displayChangeHandler}
                   className="MdList"
                 >
                   {" "}
-                </MdList>
+                </FormatListBulletedIcon>
               ) : (
-                <MdViewStream
+                <ViewStreamIcon
                   size="3rem"
                   color="#3b3d3d"
                   onClick={displayChangeHandler}
                   className="MdViewStream"
                 >
                   {" "}
-                </MdViewStream>
+                </ViewStreamIcon>
               )}
             </DisplayPick>
             <SortFilter>
